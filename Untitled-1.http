@@ -1,0 +1,81 @@
+POST http://0.0.0.0:7000/index.php HTTP/1.1
+content-type: application/json
+
+{
+
+    "sensors": [
+
+      {
+
+        "location": "loc-1",
+
+        "key": "temperature",
+
+        "value": 2,
+
+        "device": "dht11"
+
+      },
+
+      {
+
+        "location": "loc-1",
+
+        "key": "humidity",
+
+        "value": 45,
+
+        "device": "dht11"
+
+      },
+
+      {
+
+        "location": "loc-1",
+
+        "key": "soil_moisture",
+
+        "value": 354,
+
+        "device": "EIS10698"
+
+      }
+
+    ]
+
+  }
+###
+
+POST http://0.0.0.0:8000/items/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "b",
+    "description": "Thu, 21 Oct 2015 18:27:50 GMT"
+}
+
+###
+
+POST http://0.0.0.0:8000/items/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "c",
+    "description": "Thu, 21 Oct 2015 18:27:50 GMT"
+}
+
+
+### 
+GET http://0.0.0.0:8000/items/ HTTP/1.1
+
+
+
+
+
+
+
+
+
+
+
+
